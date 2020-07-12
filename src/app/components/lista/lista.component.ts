@@ -8,9 +8,10 @@ import { PrincipalService } from 'src/app/services/principal.service';
 })
 export class ListaComponent implements OnInit {
 
-  constructor(public service: PrincipalService) { }
+  constructor(public service: PrincipalService) {
+
+  }
 
   ngOnInit(): void {
   }
-
 }

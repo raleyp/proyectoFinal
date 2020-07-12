@@ -1,3 +1,7 @@
+<span>{{tarea.usuario}}</span>
+&nbsp;
 <span>{{tarea.descripcion}}</span>
+&nbsp;
+<span>{{tarea.fecha | date:'dd/MM/yyyy HH:mm:ss' }}</span>
 &nbsp;
 <button (click)="eliminar()">X</button>
