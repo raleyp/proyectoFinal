@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Tarea } from '../models/tarea';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ import { catchError, tap } from 'rxjs/operators';
 export class PrincipalService {
   public tareas: Tarea[];
 
-  tareasUrl = 'http://127.0.0.1:4000/tareas';  // URL to web api
+  private tareasUrl = 'api/heroes';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -30,7 +30,6 @@ export class PrincipalService {
       );
   }
 
-
   /**PUT: update the Tareason the server. Return the update tarea upon success */
 
   updateTarea(tarea: Tarea): Observable<Tarea> {
@@ -39,28 +38,6 @@ export class PrincipalService {
         catchError(this.handleError('updateTarea', tarea))
       );
   }
-
-  //////// Save methods //////////
-
-  /** POST: add a new tarea to the server */
-  addTarea(tarea: Tarea): Observable<Tarea> {
-    return this.http.post<Tarea>(this.tareasUrl, tarea, this.httpOptions).pipe(
-      tap((newTarea: Tarea) => console.log(`added tarea w/ id=${newTarea.id}`)),
-      catchError(this.handleError<Tarea>('addTarea'))
-    );
-  }
-
-  /** DELETE: delete the tarea from the server */
-  deleteTarea(tarea: Tarea | number): Observable<Tarea> {
-    const id = typeof tarea === 'number' ? tarea : tarea.id;
-    const url = `${this.tareasUrl}/${id}`;
-
-    return this.http.delete<Tarea>(url, this.httpOptions).pipe(
-      tap(_ => console.log(`deleted tarea id=${id}`)),
-      catchError(this.handleError<Tarea>('deleteTarea'))
-    );
-  }
-
 
   /**
    * Handle Http operation that failed.
@@ -79,7 +56,6 @@ export class PrincipalService {
 
       // Let the app keep running by returning an empty result.
       return of(result as T);
-    }
+    };
   }
-
 }
