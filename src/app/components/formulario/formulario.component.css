@@ -1,0 +1,23 @@
+input {
+    position: relative;
+    margin: 10px;
+    float: center;
+  }
+  
+  input:nth-child(1){
+    display: inline-block;
+    width: 200px;
+  }
+  
+  input:nth-child(2){
+    display: inline-block;
+  }
+  button:nth-child(1){
+    display: inline-block;
+  }
+
+  .formulario {
+    display: block;
+    border: 1px solid black;
+    padding: 3px;
+  }

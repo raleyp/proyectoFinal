@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+ 
+h1 {
+    color: #0677b3;
+    font-family: ITC Avant Garde Gothic Std Demi Oblique;
+    font-size: 300%;
+    text-align: center;
+  }
+  h2, h3 {
+    background: #0677b3;
+    color: white;
+    font-family: ITC Avant Garde Gothic Std Demi Oblique;
+    font-weight: lighter;
+  }
+  h4 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    text-align: center;
+  }
+  
+
+  body, input[text], button {
+    color: #333;
+    font-family: Cambria, Georgia;
+  }
+  a {
+    cursor: pointer;
+    cursor: hand;
+  }
+
+  button {
+    font: 700 1em Tahoma, Arial, Verdana, sans-serif;
+    text-align: center;
+    color: #fff; background-color: #59B0E5;
+    border: 1px solid #0074a5;
+    border-top: 1px solid #004370;
+    border-left: 1px solid #004370;
+    cursor: pointer;
+  }
+ 
+  button {
+    width: auto; /* ie */
+    overflow: visible; /* ie */
+    padding: 3px 8px 2px 6px; /* ie */
+  }
+
+  button[type] {
+    padding: 4px 8px 4px 6px; /* firefox */
+  }
+
+  button:hover {
+    background-color: #cfd8dc;
+  }
+  button:disabled {
+    background-color: #eee;
+    color: rgb(114, 111, 111);
+    cursor: auto;
+  }
+  
+  /* everywhere else */
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  Header{
+    color: #369;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  header h1, h2 {
+    margin: 0 auto 0 auto;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url(assets/Fondo.jpg);    
+    background-size: cover;
+    position: relative;
+    margin: 2em;
+}
+
+.clearfix {
+    clear:both;
+}
+
+footer{
+    color: #369;
+    text-align: center;
+    height: 150px;
+    line-height: 80px;
+}

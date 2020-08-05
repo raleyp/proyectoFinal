@@ -1,5 +1,10 @@
-<input type="text" name="tarea" [(ngModel)]="usuario" placeholder="Usuario">
-&nbsp;
-<input type="text" name="tarea" [(ngModel)]="descripcion" placeholder="Descripción">
-&nbsp;
-<button (click)="procesar()">Agregar tarea</button>
+<div class="formulario">
+    <legend></legend>
+    <label>Usuario:
+        <input type="text" maxlength="10" name="tarea" [(ngModel)]="usuario" placeholder="Usuario">
+    </label>
+    <label>Actividad:
+        <input type="text" name="tarea" [(ngModel)]="descripcion" placeholder="Descripción">
+    </label>
+    <button title="Agregar" (click)="procesar()">Agregar tarea</button>
+</div>

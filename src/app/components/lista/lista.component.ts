@@ -13,5 +13,7 @@ export class ListaComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.service.getTareas().subscribe(resp => {
+    });
   }
 }

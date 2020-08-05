@@ -1,0 +1,24 @@
+ul {
+    position: top;
+    width: 49%;
+    /*height:30px;*/
+    float: center;;
+    margin: 10px auto 0;
+    border:2px solid #8c8b4b;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+ul li {
+    display: flex;
+    background: #1d4274;
+    padding: 10px 20px;
+    color: rgb(249, 249, 250);
+    margin: 5px 0;
+    transition: .5s;
+}
+
+ul li:hover {
+    transform: scale(1.06);
+    background: #0fdb5d9d;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PrincipalService } from 'src/app/services/principal.service';
 import { Tarea } from 'src/app/models/tarea';
 
@@ -27,8 +27,10 @@ export class FormularioComponent implements OnInit {
       tarea.usuario = this.usuario;
       tarea.descripcion = this.descripcion;
       tarea.fecha = new Date();
-      this.tareaSvc.tareas.push(tarea);
+      tarea.estado = 'A';
+      //this.tareaSvc.tareas.push(tarea);
       console.log(tarea);
+      this.tareaSvc.addTarea(tarea).subscribe((resp) => console.log('RESPONSE', resp));
     }
   }
 

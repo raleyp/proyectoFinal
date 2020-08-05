@@ -1,0 +1,33 @@
+.id, span:nth-child(1){
+    position: relative;
+    width: 25px;
+    text-align: left;
+    padding: 5px;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+.usuario, span:nth-child(2){
+    position: relative;
+    width: 100px;
+    text-align: left;
+    padding: 5px;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+.description, span:nth-child(3){
+    width: 150px;
+    text-align: left;
+    padding: 5px;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+.date, span:nth-child(4){
+    width: 200px;
+    text-align: left;
+    padding: 5px;
+    display: inline-block;
+    word-wrap: break-word;
+}

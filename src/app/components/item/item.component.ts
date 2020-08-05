@@ -19,6 +19,7 @@ export class ItemComponent implements OnInit {
     //Eliminamos un item de la lista
     //this.prSvc.tareas.pop();
     this.prSvc.tareas = this.prSvc.tareas.filter(cadaTarea => cadaTarea !== this.tarea);
+    this.prSvc.deleteTarea(this.tarea).subscribe((resp) => console.log('RESPONSE', resp));
   }
 
 }
